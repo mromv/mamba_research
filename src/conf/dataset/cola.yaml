@@ -1,0 +1,6 @@
+tag: glue
+dataset_name: cola
+doc_to_text: "Question: Does this sentence make sense?\nSentence: {sentence}"
+doc_to_choice: ["no", "yes"]
+metric_list:
+  - metric: acc

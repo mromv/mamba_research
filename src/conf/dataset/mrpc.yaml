@@ -1,0 +1,7 @@
+tag: glue
+dataset_name: mrpc
+doc_to_text: "Question: Do both sentences mean the same thing?\nSentence 1: {sentence1}\nSentence 2: {sentence2}"
+doc_to_choice: ["no", "yes"]
+metric_list:
+  - metric: acc
+  - metric: f1

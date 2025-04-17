@@ -1,0 +1,23 @@
+defaults:
+  - _self_
+  - dataset: cola
+
+model_name: state-spaces/mamba-130m-hf
+
+wandb:
+  project: reasoning_exps
+
+training:
+  batch_size: 4
+  epochs: 1
+  lr: 0.00005
+  weight_decay: 0.00001
+  warmup_steps: 500
+  optim: adamw_torch_fused
+  lr_scheduler_type: cosine
+  max_grad_norm: 1.0
+  eval_strategy: steps
+  logging_steps: 50
+
+output_dir_template: "lmclass_{dataset_name}_{peft}_{epochs}ep_{lr}"
+save_dir: './checkpoints'
