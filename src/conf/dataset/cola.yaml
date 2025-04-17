@@ -1,0 +1,6 @@
+tag: glue
+dataset_name: cola
+doc_to_text: "{{{sentence}}}\n{sep_token}Question: Does this sentence make sense?\n{sep_token}Answer:{cls_token}"
+doc_to_choice: ["no", "yes"]
+metric_list:
+  - metric: mcc

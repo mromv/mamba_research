@@ -1,0 +1,2 @@
+learnable_tokens: False
+freeze_model: False
