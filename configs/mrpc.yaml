@@ -1,0 +1,11 @@
+prompt: |
+  Determine whether the two sentences in the given pair are semantically equivalent.\n
+  Your task is to answer the question: Do both sentences mean the same thing?\n
+  Answer strictly yes or no.\n
+
+template: "Sentence 1: {sentence1}\nSentence 2: {sentence2}\n"
+
+dataset_config:
+  name: glue
+  subset: mrpc
+  split: train

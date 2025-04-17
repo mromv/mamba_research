@@ -1,0 +1,11 @@
+prompt: |
+  Analyze the following sentence's grammatical correctness.
+  Your task is to answer the question: is this sentence grammatically correct?
+  Answer strictly yes or no.
+
+template: "Sentence : {sentence}\n"
+
+dataset_config:
+  name: glue
+  subset: cola
+  split: validation
