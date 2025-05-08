@@ -1,3 +1,4 @@
+import torch
 from typing import List
 from tqdm import tqdm
 from datasets import Dataset
