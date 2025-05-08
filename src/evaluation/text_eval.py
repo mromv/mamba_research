@@ -1,5 +1,6 @@
 from typing import List
 from tqdm import tqdm
+from datasets import Dataset
 from transformers import PreTrainedModel, PreTrainedTokenizer
 
 def generate_answers(
