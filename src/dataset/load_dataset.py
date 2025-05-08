@@ -16,6 +16,7 @@ def load_tokenized_dataset(
     ]
     
     tokenize_func = get_tokenize_function(tokenizer, text_template, choices, learnable_tokens)
+    tokenized_dataset = dataset.map(tokenize_func)
     
-    return dataset.map(tokenize_func).remove_columns(columns_to_remove)
+    return tokenized_dataset, tokenized_dataset.remove_columns(columns_to_remove).remove_columns(['prompt'])
     

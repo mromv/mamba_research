@@ -25,5 +25,4 @@ def setup_model_and_tokenizer(
         model = get_peft_model(model, config)
         log.info(model.print_trainable_parameters())
     
-    model.gradient_checkpointing_enable()
     return model, tokenizer

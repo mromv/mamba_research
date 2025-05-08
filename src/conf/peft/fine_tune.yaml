@@ -1,2 +1,2 @@
 learnable_tokens: True
-freeze_model: True
+freeze_model: False

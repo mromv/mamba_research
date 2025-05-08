@@ -1,7 +1,7 @@
 defaults:
   - _self_
   - dataset: cola
-  - peft: lora
+  - peft: fine_tune
 
 model_name: state-spaces/mamba-130m-hf
 
@@ -9,8 +9,8 @@ wandb:
   project: new_glue
 
 training:
-  batch_size: 1
-  epochs: 1
+  batch_size: 128
+  epochs: 50
   lr: 0.00005
   weight_decay: 0.00001
   warmup_steps: 500
@@ -18,4 +18,5 @@ training:
   lr_scheduler_type: cosine
 
 output_dir_template: "lmclass_{dataset_name}_{peft}_{epochs}ep_{lr}"
-save_dir: './checkpoints'
+checkpoints: './checkpoints'
+save_dir: './models'

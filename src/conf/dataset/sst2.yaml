@@ -1,0 +1,6 @@
+tag: glue
+dataset_name: cola
+doc_to_text: "{{{sentence}}}\n{sep_token}Question: Is this sentence positive or negative?\n{sep_token}Answer:{cls_token}"
+doc_to_choice: ["negative", "positive"]
+metric_list:
+  - metric: acc

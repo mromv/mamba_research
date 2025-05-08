@@ -1,0 +1,8 @@
+lora:
+  _target_: peft.LoraConfig
+  _convert_: object
+  r: 8
+  lora_alpha: 8
+  target_modules: ["out_proj"]
+  lora_dropout: 0.1
+  # modules_to_save: ["lm_head"]

@@ -1,0 +1,7 @@
+tag: glue
+dataset_name: mrpc
+doc_to_text: "Question: {{{question}}}\n{sep_token}Sentence: {{{sentence}}}\n{sep_token}Question: Does this response answer the question?\n{sep_token}Answer:{cls_token}"
+doc_to_choice: ["yes", "no"]
+metric_list:
+  - metric: acc
+  - metric: f1
